@@ -1,0 +1,125 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', sans-serif, 'SimHei', 'STHeiti';
+	line-height: 1.2;
+	color: #3a3a3a;
+	margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: .95em;
+}
+h2,
+a {
+	color: #093a58;
+}
+a {
+	text-decoration: none;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+.name {
+	font-size: 1.4em;
+	margin: 0;
+}
+.main-nav {
+	margin-top: 2.5px;
+}
+.name a:before {
+	content:"";
+	background-image: url('../img/robot.png');
+    background-size: 40px 40px;
+	display: inline-block;
+	margin-right: 10px;
+    width: 40px;
+	height: 40px; 
+}
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 5px 5px;
+}
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+}
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+.banner,
+.main-content {
+	text-align: center;
+}
+.banner {
+	color: #fff;
+	background: #3acec2;
+	padding: 1.5em 0;
+}
+.main-content {
+	padding-bottom: 5%;
+}
+.container {
+	margin: 0 auto 20px;
+	padding: 0;
+	background: #fff;
+	height: 90%;
+}
+.item {
+	padding: 0.5em 0.5em;
+	margin: 5px;
+	background: #3db5da;
+}
+
+/* ---- Page Elements ---- */
+
+.headline {
+	margin-bottom: 0;
+}
+.button {
+	color: #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #3acec2;
+	margin-top: auto;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+	.main-header,
+	.row {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.tagline {
+		font-size: 1.5em;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
