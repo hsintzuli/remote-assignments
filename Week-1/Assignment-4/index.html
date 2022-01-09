@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" dir=ltr>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <title>Google Developers</title>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons&display=block">
+    <link rel="stylesheet"
+        href="https://www.gstatic.com/devrel-devsite/prod/v0cb51633d618abe46a66cb213829eebf08ffc674824d203cafddde748d2d407e/developers/css/app.css">
+    <link rel="shortcut icon"
+        href="https://www.gstatic.com/devrel-devsite/prod/v0cb51633d618abe46a66cb213829eebf08ffc674824d203cafddde748d2d407e/developers/images/favicon.png">
+</head>
+
+<body class="" template="landing" theme="white" type="article" layout="full" pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper">
+        <devsite-header>
+            <div class="devsite-header--inner nocontent">
+                <div class="devsite-top-logo-row-wrapper-wrapper">
+                    <div class="devsite-top-logo-row-wrapper">
+                        <div class="devsite-top-logo-row">
+                            <button type="button" id="devsite-hamburger-menu"
+                                class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+                                data-category="Site-Wide Custom Events" data-label="Navigation menu button"
+                                visually-hidden aria-label="Open menu">
+                            </button>
+                            <div class="devsite-product-name-wrapper">
+                                <a href="/" class="devsite-site-logo-link gc-analytics-event"
+                                    data-category="Site-Wide Custom Events" data-label="Site logo"
+                                    track-type="globalNav" track-name="googleDevelopers" track-metadata-position="nav"
+                                    track-metadata-eventDetail="nav">
+                                    <img src="https://www.gstatic.com/devrel-devsite/prod/v0cb51633d618abe46a66cb213829eebf08ffc674824d203cafddde748d2d407e/developers/images/lockup.svg"
+                                        class="devsite-site-logo" alt="Google Developers">
+                                </a>
+                                <span class="devsite-product-name">
+                                    <ul class="devsite-breadcrumb-list">
+                                        <li class="devsite-breadcrumb-item devsite-has-google-wordmark"></li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <div class="devsite-top-logo-row-middle">
+                                <div class="devsite-header-upper-tabs">
+                                    <devsite-tabs class="upper-tabs">
+                                        <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+                                            <tab dropdown>
+                                                <a href="https://developers.google.com/products"
+                                                    class="gc-analytics-event " track-type="nav"
+                                                    track-metadata-eventdetail="https://developers.google.com/products"
+                                                    track-metadata-position="nav - products"
+                                                    track-metadata-module="primary nav"
+                                                    data-category="Site-Wide Custom Events" data-label="Tab: Products"
+                                                    track-name="products">
+                                                    Products
+                                                </a>
+                                            </tab>
+                                            <tab>
+                                                <a href="https://developers.google.com/events"
+                                                    class="gc-analytics-event " track-type="nav"
+                                                    track-metadata-eventdetail="https://developers.google.com/events"
+                                                    track-metadata-position="nav - events"
+                                                    track-metadata-module="primary nav"
+                                                    data-category="Site-Wide Custom Events" data-label="Tab: Events"
+                                                    track-name="events">
+                                                    Events
+                                                </a>
+                                            </tab>
+                                            <tab>
+                                                <a href="https://developers.google.com/learn"
+                                                    class="gc-analytics-event " track-type="nav"
+                                                    track-metadata-eventdetail="https://developers.google.com/learn"
+                                                    track-metadata-position="nav - learn"
+                                                    track-metadata-module="primary nav"
+                                                    data-category="Site-Wide Custom Events" data-label="Tab: Learn"
+                                                    track-name="learn">
+                                                    Learn
+                                                </a>
+                                            </tab>
+                                            <tab dropdown>
+                                                <a href="https://developers.google.com/community"
+                                                    class="gc-analytics-event " track-type="nav"
+                                                    track-metadata-eventdetail="https://developers.google.com/community"
+                                                    track-metadata-position="nav - developer communities"
+                                                    track-metadata-module="primary nav"
+                                                    data-category="Site-Wide Custom Events"
+                                                    data-label="Tab: Developer Communities"
+                                                    track-name="developer communities">
+                                                    Developer Communities
+                                                </a>
+                                            </tab>
+                                            <tab>
+                                                <a href="https://developers.google.com/profile/u/me"
+                                                    class="gc-analytics-event " track-type="nav"
+                                                    track-metadata-eventdetail="https://developers.google.com/profile/u/me"
+                                                    track-metadata-position="nav - developer profile"
+                                                    track-metadata-module="primary nav"
+                                                    data-category="Site-Wide Custom Events"
+                                                    data-label="Tab: Developer Profile" track-name="developer profile">
+                                                    Developer Profile
+                                                </a>
+                                            </tab>
+                                            <tab>
+                                                <a href="https://developers.googleblog.com" class="gc-analytics-event "
+                                                    track-type="nav"
+                                                    track-metadata-eventdetail="https://developers.googleblog.com"
+                                                    track-metadata-position="nav - blog"
+                                                    track-metadata-module="primary nav"
+                                                    data-category="Site-Wide Custom Events" data-label="Tab: Blog"
+                                                    track-name="blog">
+                                                    Blog
+                                                </a>
+                                            </tab>
+                                        </nav>
+                                    </devsite-tabs>
+                                </div>
+                                <devsite-search aria-expanded="false" aria-haspopup="listbox" enable-signin
+                                    enable-search enable-suggestions enable-query-completion
+                                    project-name="Google Developers" tenant-name="Google Developers" role="combobox">
+                                    <form class="devsite-search-form" action="https://developers.google.com/s/results"
+                                        method="GET">
+                                        <div class="devsite-search-container">
+                                            <div class="devsite-searchbox">
+                                                <input aria-activedescendant="" aria-autocomplete="list"
+                                                    aria-label="Search" aria-haspopup="false" aria-multiline="false"
+                                                    aria-label="Search box" autocomplete="off"
+                                                    class="devsite-search-field devsite-search-query" name="q"
+                                                    placeholder="Search" role="searchbox" type="text" value="">
+                                                <div class="devsite-search-image material-icons" aria-hidden="true">
+                                                </div>
+                                            </div>
+                                            <button type="button" search-open
+                                                class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+                                                aria-label="Open search"></button>
+                                        </div>
+                                    </form>
+                                    <button type="button" search-close
+                                        class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+                                        aria-label="Close search"></button>
+                                </devsite-search>
+                            </div>
+
+                            <devsite-language-selector>
+                                <devsite-select class="devsite-language-selector-menu">
+                                    <select aria-label="Select your language preference."
+                                        class="devsite-language-selector-select" name="language" track-name="click"
+                                        track-type="languageSelector">
+                                        <option value="en" lang="en">
+                                            English
+                                        </option>
+                                        <option value="id" lang="id">
+                                            Bahasa Indonesia
+                                        </option>
+                                        <option value="de" lang="de">
+                                            Deutsch
+                                        </option>
+                                        <option value="es" lang="es">
+                                            Español
+                                        </option>
+                                        <option value="fr" lang="fr">
+                                            Français
+                                        </option>
+                                        <option value="pt_br" lang="pt_br">
+                                            Português – Brasil
+                                        </option>
+                                        <option value="ru" lang="ru">
+                                            Русский
+                                        </option>
+                                        <option value="zh_cn" lang="zh_cn">
+                                            中文 – 简体
+                                        </option>
+                                        <option value="ja" lang="ja">
+                                            日本語
+                                        </option>
+                                        <option value="ko" lang="ko">
+                                            한국어
+                                        </option>
+                                    </select>
+                                </devsite-select>
+                            </devsite-language-selector>
+                        </div>
+                    </div>
+                </div>
+                <div class="devsite-collapsible-section devsite-header-no-lower-tabs">
+                    <div class="devsite-header-background"></div>
+                </div>
+            </div>
+        </devsite-header>
+
+        <section id="gc-wrapper">
+            <main role="main" class="devsite-main-content">
+                <div class="devsite-sidebar">
+                    <div class="devsite-sidebar-content">
+                        <devsite-toc class="devsite-nav" role="navigation" aria-label="On this page" depth="2"
+                            scrollbars disabled></devsite-toc>
+                        <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                        </devsite-recommendations-sidebar>
+                    </div>
+                </div>
+                <devsite-content>
+                    <article class="devsite-article">
+                        <div class="devsite-banner devsite-banner-announcement">
+                            <div class="devsite-banner-message">
+                                <div class="devsite-banner-message-text">
+                                    <style>
+                                        .devsite-banner-announcement:not(.devsite-banner-tenant) {
+                                            background: #202124;
+                                            color: white;
+                                            font-weight: 500;
+                                        }
+
+                                        .devsite-banner-announcement a {
+                                            color: white;
+                                            font-weight: 700;
+                                        }
+
+                                        .devsite-banner-announcement a:link:not(.button),
+                                        .devsite-banner-announcement a:visited:not(.button) {
+                                            background: 0;
+                                        }
+
+                                        .devsite-banner-announcement a:hover,
+                                        .devsite-banner-announcement a:focus {
+                                            text-decoration: none;
+                                        }
+
+                                        .devsite-banner-announcement .devsite-banner-message-text {
+                                            margin: 0 auto;
+                                        }
+                                    </style>
+                                    <span class="nocontent">
+                                        Google is committed to advancing racial equity for Black communities.
+                                    </span> <a href="https://google.com/racialequity"
+                                        class="gc-analytics-event nocontent" data-category="Announcement"
+                                        data-label="Racial Equity">See how.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.banner-->
+                        <section
+                            class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-hero devsite-landing-row-50 devsite-landing-row-no-image-background dgc-hero"
+                            header-position="top">
+                            <div class="devsite-landing-row-inner">
+                                <div class="devsite-landing-row-group">
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-image">
+                                                <a href="https://developers.google.com/learn"
+                                                    data-category="Homepage Hero Banner"
+                                                    data-label="Learn to build anything with Google, Main Title"
+                                                    data-action="link">
+                                                    <img alt=""
+                                                        src="https://developers.google.com/site-assets/images/home/learn_hero.jpg"
+                                                        srcset="https://developers.google.com/site-assets/images/home/learn_hero_36.jpg 36w,https://developers.google.com/site-assets/images/home/learn_hero_48.jpg 48w,https://developers.google.com/site-assets/images/home/learn_hero_72.jpg 72w,https://developers.google.com/site-assets/images/home/learn_hero_96.jpg 96w,https://developers.google.com/site-assets/images/home/learn_hero_480.jpg 480w,https://developers.google.com/site-assets/images/home/learn_hero_720.jpg 720w,https://developers.google.com/site-assets/images/home/learn_hero_856.jpg 856w,https://developers.google.com/site-assets/images/home/learn_hero_960.jpg 960w,https://developers.google.com/site-assets/images/home/learn_hero_1440.jpg 1440w,https://developers.google.com/site-assets/images/home/learn_hero_1920.jpg 1920w,https://developers.google.com/site-assets/images/home/learn_hero_2880.jpg 2880w"
+                                                        sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+                                                        loading="lazy">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="learn-to-build-anything-with-google"
+                                                    data-text="Learn to build anything with Google"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://developers.google.com/learn"
+                                                        data-category="Homepage Hero Banner"
+                                                        data-label="Learn to build anything with Google, Main Title"
+                                                        data-action="link">
+                                                        Learn to build anything with Google
+                                                    </a>
+                                                </h3>
+
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Join the one-stop destination for
+                                                    self-guided coding exercises,
+                                                    quizzes, technical
+                                                    articles,
+                                                    and
+                                                    video
+                                                    tutorials. Gain the software skills you need
+                                                    to develop with
+                                                    Google’s technology.
+                                                </div>
+
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://developers.google.com/learn"
+                                                        class="button button-primary"
+                                                        data-label="Learn to build anything with Google, Start learning"
+                                                        data-category="Homepage Hero Banner">
+                                                        Start learning
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-header-centered devsite-landing-row-large-headings devsite-landing-row-logos dgc-logo-garden"
+                            background="white" header-position="top">
+                            <div class="devsite-landing-row-inner">
+                                <header class="devsite-landing-row-header">
+                                    <div class="devsite-landing-row-header-text">
+                                        <h2 id="build-stronganythingstrong-with-google"
+                                            data-text="Build anything with Google" tabindex="0">
+                                            Build <strong>anything</strong> with Google
+                                        </h2>
+                                    </div>
+                                </header>
+
+                                <div class="devsite-landing-row-group">
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developer.android.com"
+                                                        data-category="Homepage Logo Garden" data-label="Android">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developer.android.com/images/brand/Android_Robot.png"
+                                                                srcset="https://developer.android.com/images/brand/Android_Robot_36.png 36w,https://developer.android.com/images/brand/Android_Robot_48.png 48w,https://developer.android.com/images/brand/Android_Robot_72.png 72w,https://developer.android.com/images/brand/Android_Robot_96.png 96w,https://developer.android.com/images/brand/Android_Robot_480.png 480w,https://developer.android.com/images/brand/Android_Robot_720.png 720w,https://developer.android.com/images/brand/Android_Robot_856.png 856w,https://developer.android.com/images/brand/Android_Robot_960.png 960w,https://developer.android.com/images/brand/Android_Robot_1440.png 1440w,https://developer.android.com/images/brand/Android_Robot_1920.png 1920w,https://developer.android.com/images/brand/Android_Robot_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Android
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://cloud.google.com/developers"
+                                                        data-category="Homepage Logo Garden" data-label="Google Cloud">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="//www.gstatic.com/images/branding/product/2x/google_cloud_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Google
+                                                    Cloud</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://firebase.google.com/docs"
+                                                        data-category="Homepage Logo Garden" data-label="Firebase">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/firebase_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Firebase
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://flutter.dev/docs"
+                                                        data-category="Homepage Logo Garden" data-label="Flutter">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/flutter_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Flutter
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developers.google.com/assistant"
+                                                        data-category="Homepage Logo Garden"
+                                                        data-label="Google Assistant">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/assistant_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Google
+                                                    Assistant</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developers.google.com/maps"
+                                                        data-category="Homepage Logo Garden" data-label="Maps">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/maps_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Maps
+                                                    Platform</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://www.tensorflow.org/tutorials"
+                                                        data-category="Homepage Logo Garden" data-label="TensorFlow">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/images/products/tensorflow-logo-196.png"
+                                                                srcset="https://developers.google.com/site-assets/images/products/tensorflow-logo-196_36.png 36w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_48.png 48w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_72.png 72w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_96.png 96w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_480.png 480w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_720.png 720w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_856.png 856w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_960.png 960w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_1440.png 1440w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_1920.png 1920w,https://developers.google.com/site-assets/images/products/tensorflow-logo-196_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    TensorFlow
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developers.google.com/web"
+                                                        data-category="Homepage Logo Garden" data-label="Web">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/web/images/web-fundamentals-icon192x192.png"
+                                                                srcset="https://developers.google.com/web/images/web-fundamentals-icon192x192_36.png 36w,https://developers.google.com/web/images/web-fundamentals-icon192x192_48.png 48w,https://developers.google.com/web/images/web-fundamentals-icon192x192_72.png 72w,https://developers.google.com/web/images/web-fundamentals-icon192x192_96.png 96w,https://developers.google.com/web/images/web-fundamentals-icon192x192_480.png 480w,https://developers.google.com/web/images/web-fundamentals-icon192x192_720.png 720w,https://developers.google.com/web/images/web-fundamentals-icon192x192_856.png 856w,https://developers.google.com/web/images/web-fundamentals-icon192x192_960.png 960w,https://developers.google.com/web/images/web-fundamentals-icon192x192_1440.png 1440w,https://developers.google.com/web/images/web-fundamentals-icon192x192_1920.png 1920w,https://developers.google.com/web/images/web-fundamentals-icon192x192_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Web</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developers.google.com/google-ads"
+                                                        data-category="Homepage Logo Garden" data-label="Google Ads">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/ads/images/ads_192px_clr.svg"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Google Ads
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://chromeos.dev" data-category="Homepage Logo Garden"
+                                                        data-label="Chrome OS">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/homepage-assets/images/chromeos-logo.png"
+                                                                srcset="https://developers.google.com/homepage-assets/images/chromeos-logo_36.png 36w,https://developers.google.com/homepage-assets/images/chromeos-logo_48.png 48w,https://developers.google.com/homepage-assets/images/chromeos-logo_72.png 72w,https://developers.google.com/homepage-assets/images/chromeos-logo_96.png 96w,https://developers.google.com/homepage-assets/images/chromeos-logo_480.png 480w,https://developers.google.com/homepage-assets/images/chromeos-logo_720.png 720w,https://developers.google.com/homepage-assets/images/chromeos-logo_856.png 856w,https://developers.google.com/homepage-assets/images/chromeos-logo_960.png 960w,https://developers.google.com/homepage-assets/images/chromeos-logo_1440.png 1440w,https://developers.google.com/homepage-assets/images/chromeos-logo_1920.png 1920w,https://developers.google.com/homepage-assets/images/chromeos-logo_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Chrome OS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://play.google.com/console/about/"
+                                                        data-category="Homepage Logo Garden" data-label="Google Play">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/play_prism_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Google
+                                                    Play</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developers.google.com/youtube"
+                                                        data-category="Homepage Logo Garden" data-label="YouTube">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/youtube_64dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    YouTube
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-item-centered devsite-landing-row-100 dgc-logo-garden-cta"
+                            header-position="top">
+                            <div class="devsite-landing-row-inner">
+                                <div class="devsite-landing-row-group">
+                                    <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+                                        description-position="bottom">
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://developers.google.com/products"
+                                                        class="button button-primary"
+                                                        data-label="View all developer products"
+                                                        data-category="Homepage Logo Garden">View
+                                                        all developer products</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards devsite-landing-row-header-centered devsite-landing-row-no-image-background"
+                            header-position="top">
+                            <div class="devsite-landing-row-inner">
+                                <div class="devsite-landing-row-group">
+                                    <div class="devsite-landing-row-item dgc-programs dgc-programs--events"
+                                        description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-image">
+                                                <a href="https://developers.google.com/events"
+                                                    data-category="Homepage Promo Banner"
+                                                    data-label="Events, Main Title" data-action="link">
+                                                    <img alt=""
+                                                        src="https://developers.google.com/site-assets/images/home/card-header-grid.png"
+                                                        srcset="https://developers.google.com/site-assets/images/home/card-header-grid_36.png 36w,https://developers.google.com/site-assets/images/home/card-header-grid_48.png 48w,https://developers.google.com/site-assets/images/home/card-header-grid_72.png 72w,https://developers.google.com/site-assets/images/home/card-header-grid_96.png 96w,https://developers.google.com/site-assets/images/home/card-header-grid_480.png 480w,https://developers.google.com/site-assets/images/home/card-header-grid_720.png 720w,https://developers.google.com/site-assets/images/home/card-header-grid_856.png 856w,https://developers.google.com/site-assets/images/home/card-header-grid_960.png 960w,https://developers.google.com/site-assets/images/home/card-header-grid_1440.png 1440w,https://developers.google.com/site-assets/images/home/card-header-grid_1920.png 1920w,https://developers.google.com/site-assets/images/home/card-header-grid_2880.png 2880w"
+                                                        sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+                                                        loading="lazy">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="events" data-text="Events" class="hide-from-toc no-link"
+                                                    tabindex="0">
+                                                    <a href="https://developers.google.com/events"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Events, Main Title" data-action="link">
+                                                        Events
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Bringing developers together in-person and
+                                                    online. Stay in the
+                                                    know about upcoming
+                                                    events, catch up on content you missed, and
+                                                    connect with Google
+                                                    experts.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://developers.google.com/events" class="button"
+                                                        data-label="Events, See Events"
+                                                        data-category="Homepage Promo Banner">See
+                                                        events</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item dgc-programs dgc-programs--community"
+                                        description-position="bottom">
+                                        <div class="devsite-landing-row-item-media ">
+                                            <figure class="devsite-landing-row-item-image">
+                                                <a href="https://developers.google.com/community"
+                                                    data-category="Homepage Promo Banner"
+                                                    data-label="Community, Main Title" data-action="link">
+                                                    <img alt=""
+                                                        src="https://developers.google.com/site-assets/images/home/card-header-grid.png"
+                                                        srcset="https://developers.google.com/site-assets/images/home/card-header-grid_36.png 36w,https://developers.google.com/site-assets/images/home/card-header-grid_48.png 48w,https://developers.google.com/site-assets/images/home/card-header-grid_72.png 72w,https://developers.google.com/site-assets/images/home/card-header-grid_96.png 96w,https://developers.google.com/site-assets/images/home/card-header-grid_480.png 480w,https://developers.google.com/site-assets/images/home/card-header-grid_720.png 720w,https://developers.google.com/site-assets/images/home/card-header-grid_856.png 856w,https://developers.google.com/site-assets/images/home/card-header-grid_960.png 960w,https://developers.google.com/site-assets/images/home/card-header-grid_1440.png 1440w,https://developers.google.com/site-assets/images/home/card-header-grid_1920.png 1920w,https://developers.google.com/site-assets/images/home/card-header-grid_2880.png 2880w"
+                                                        sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+                                                        loading="lazy">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="community" data-text="Community" class="hide-from-toc no-link"
+                                                    tabindex="0">
+                                                    <a href="https://developers.google.com/community"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Community, Main Title" data-action="link">
+                                                        Community
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Connect with fellow developers and startups
+                                                    in your area, hear
+                                                    from industry experts,
+                                                    share your skills, and learn new ones.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://developers.google.com/community" class="button"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Community, Find community">Find
+                                                        community</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards devsite-landing-row-header-centered"
+                            background="grey" header-position="top">
+                            <div class="devsite-landing-row-inner">
+                                <header class="devsite-landing-row-header">
+                                    <div class="devsite-landing-row-header-text">
+                                        <h2 id="news" data-text="News" tabindex="0">
+                                            News
+                                        </h2>
+                                    </div>
+                                </header>
+                                <div class="devsite-landing-row-group">
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://developers.google.com/learn/topics/on-device-ml"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Build with On-Device ML, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/images/news/odml_logo.png"
+                                                                srcset="https://developers.google.com/site-assets/images/news/odml_logo_36.png 36w,https://developers.google.com/site-assets/images/news/odml_logo_48.png 48w,https://developers.google.com/site-assets/images/news/odml_logo_72.png 72w,https://developers.google.com/site-assets/images/news/odml_logo_96.png 96w,https://developers.google.com/site-assets/images/news/odml_logo_480.png 480w,https://developers.google.com/site-assets/images/news/odml_logo_720.png 720w,https://developers.google.com/site-assets/images/news/odml_logo_856.png 856w,https://developers.google.com/site-assets/images/news/odml_logo_960.png 960w,https://developers.google.com/site-assets/images/news/odml_logo_1440.png 1440w,https://developers.google.com/site-assets/images/news/odml_logo_1920.png 1920w,https://developers.google.com/site-assets/images/news/odml_logo_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="build-with-on-device-ml" data-text="Build with On-Device ML"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://developers.google.com/learn/topics/on-device-ml"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Build with On-Device ML, Main title"
+                                                        data-action="link">
+                                                        Build with On-Device ML
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Address common challenges in your apps with
+                                                    on-device machine
+                                                    learning. Explore Google's
+                                                    solutions and tools like turn-key APIs,
+                                                    real-world examples from
+                                                    developers, and more.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://developers.google.com/learn/topics/on-device-ml"
+                                                        class="button button-white" data-action="button"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Build with On-Device ML, Learn more">Learn
+                                                        more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://android-developers.googleblog.com/2021/12/beta-1-update-for-12l-feature-drop.html"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Beta 1 update for 12L feature drop, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developer.android.com/images/brand/Android_Robot.png"
+                                                                srcset="https://developer.android.com/images/brand/Android_Robot_36.png 36w,https://developer.android.com/images/brand/Android_Robot_48.png 48w,https://developer.android.com/images/brand/Android_Robot_72.png 72w,https://developer.android.com/images/brand/Android_Robot_96.png 96w,https://developer.android.com/images/brand/Android_Robot_480.png 480w,https://developer.android.com/images/brand/Android_Robot_720.png 720w,https://developer.android.com/images/brand/Android_Robot_856.png 856w,https://developer.android.com/images/brand/Android_Robot_960.png 960w,https://developer.android.com/images/brand/Android_Robot_1440.png 1440w,https://developer.android.com/images/brand/Android_Robot_1920.png 1920w,https://developer.android.com/images/brand/Android_Robot_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+
+
+
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="beta-1-update-for-12l-feature-drop"
+                                                    data-text="Beta 1 update for 12L feature drop"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://android-developers.googleblog.com/2021/12/beta-1-update-for-12l-feature-drop.html"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Beta 1 update for 12L feature drop, Main title"
+                                                        data-action="link">
+                                                        Beta 1 update for 12L feature drop
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    12L streamlines the UI for large screens.
+                                                    Read more about what's
+                                                    in the release and get
+                                                    your apps ready for testing and feedback.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://android-developers.googleblog.com/2021/12/beta-1-update-for-12l-feature-drop.html"
+                                                        class="button button-white"
+                                                        data-label="Beta 1 update for 12L feature drop, Learn more"
+                                                        data-category="Homepage Promo Banner" data-action="button">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://medium.com/flutter/announcing-flutter-2-8-31d2cb7e19f5"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Flutter 2.8 is here, Main title" data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://www.gstatic.com/images/branding/product/2x/flutter_96dp.png"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="flutter-28-is-here" data-text="Flutter 2.8 is here"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://medium.com/flutter/announcing-flutter-2-8-31d2cb7e19f5"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Flutter 2.8 is here, Main title" data-action="link">
+                                                        Flutter 2.8 is here
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    This version focuses on mobile performance,
+                                                    productivity,
+                                                    updates that make it easy to
+                                                    connect apps to back-end services like
+                                                    Firebase and Google
+                                                    Cloud, and production-quality
+                                                    support for Google Ads. Includes Dart 2.15
+                                                    improvements.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://medium.com/flutter/announcing-flutter-2-8-31d2cb7e19f5"
+                                                        class="button button-white"
+                                                        data-category="Homepage Promo Banner" data-action="button"
+                                                        data-label="Flutter 2.8 is here, Learn more">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://blog.golang.org/go1.17"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Go 1.17 speeds up development, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/platform-go-color.svg"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="go-117-speeds-up-development"
+                                                    data-text="Go 1.17 speeds up development"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://blog.golang.org/go1.17"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Go 1.17 speeds up development, Main title"
+                                                        data-action="link">
+                                                        Go 1.17 speeds up development
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Go 1.17 is now available, and it brings
+                                                    performance
+                                                    enhancements, improvements to
+                                                    modules, support for 64-bit architecture on
+                                                    Windows, and many
+                                                    other changes. Get started
+                                                    by reading the release post.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://blog.golang.org/go1.17" class="button button-white"
+                                                        data-label="Go 1.17 speeds up development, Learn more"
+                                                        data-category="Homepage Promo Banner" data-action="button">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://support.google.com/googleplay/android-developer/answer/10787469"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Submit your Data safety form by February, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/images/news/play_logo.png"
+                                                                srcset="https://developers.google.com/site-assets/images/news/play_logo_36.png 36w,https://developers.google.com/site-assets/images/news/play_logo_48.png 48w,https://developers.google.com/site-assets/images/news/play_logo_72.png 72w,https://developers.google.com/site-assets/images/news/play_logo_96.png 96w,https://developers.google.com/site-assets/images/news/play_logo_480.png 480w,https://developers.google.com/site-assets/images/news/play_logo_720.png 720w,https://developers.google.com/site-assets/images/news/play_logo_856.png 856w,https://developers.google.com/site-assets/images/news/play_logo_960.png 960w,https://developers.google.com/site-assets/images/news/play_logo_1440.png 1440w,https://developers.google.com/site-assets/images/news/play_logo_1920.png 1920w,https://developers.google.com/site-assets/images/news/play_logo_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="submit-your-data-safety-form-by-february"
+                                                    data-text="Submit your Data safety form by February"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://support.google.com/googleplay/android-developer/answer/10787469"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Submit your Data safety form by February, Main title"
+                                                        data-action="link">
+                                                        Submit your Data safety form by February
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Fill out and submit your Data safety form in
+                                                    your Google Play
+                                                    Console to get early
+                                                    feedback. In February, the Data safety
+                                                    section will launch in
+                                                    the Google Play Store and
+                                                    help you explain to users how your apps
+                                                    collect, share, and
+                                                    protect user data. Deadline
+                                                    is April 1.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://support.google.com/googleplay/android-developer/answer/10787469"
+                                                        class="button button-white"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Submit your Data safety form by February, Learn more"
+                                                        data-action="button">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://www.tensorflow.org/ml-community-day"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="The latest with machine learning, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/images/products/ml-community-day.png"
+                                                                srcset="https://developers.google.com/site-assets/images/products/ml-community-day_36.png 36w,https://developers.google.com/site-assets/images/products/ml-community-day_48.png 48w,https://developers.google.com/site-assets/images/products/ml-community-day_72.png 72w,https://developers.google.com/site-assets/images/products/ml-community-day_96.png 96w,https://developers.google.com/site-assets/images/products/ml-community-day_480.png 480w,https://developers.google.com/site-assets/images/products/ml-community-day_720.png 720w,https://developers.google.com/site-assets/images/products/ml-community-day_856.png 856w,https://developers.google.com/site-assets/images/products/ml-community-day_960.png 960w,https://developers.google.com/site-assets/images/products/ml-community-day_1440.png 1440w,https://developers.google.com/site-assets/images/products/ml-community-day_1920.png 1920w,https://developers.google.com/site-assets/images/products/ml-community-day_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="the-latest-with-machine-learning"
+                                                    data-text="The latest with machine learning"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://www.tensorflow.org/ml-community-day"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="The latest with machine learning, Main title"
+                                                        data-action="link">
+                                                        The latest with machine learning
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Explore new announcements on Google’s
+                                                    machine learning products,
+                                                    including TensorFlow,
+                                                    JAX, and more. Learn about the tools that
+                                                    push state-of-the-art
+                                                    research and how you can
+                                                    use them in your ML applications.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://www.tensorflow.org/ml-community-day"
+                                                        class="button button-white"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="The latest with machine learning, Learn more"
+                                                        data-action="button">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://devlibrary.withgoogle.com/"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Join the Google Dev Library platform, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/images/news/google_dev_library.svg"
+                                                                srcset="" sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="join-the-google-dev-library-platform"
+                                                    data-text="Join the Google Dev Library platform"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://devlibrary.withgoogle.com/"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Join the Google Dev Library platform, Main title"
+                                                        data-action="link">
+                                                        Join the Google Dev Library platform
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Get started with Google Dev Library to find
+                                                    inspiration on how
+                                                    to use Google
+                                                    technologies. Search for open source
+                                                    projects, learn from other
+                                                    developers, and submit
+                                                    your latest projects so that others can
+                                                    learn from you.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://devlibrary.withgoogle.com/"
+                                                        class="button button-white" data-action="button"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Join the Google Dev Library platform, Learn more">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="devsite-landing-row-item" description-position="bottom">
+                                        <div class="devsite-landing-row-item-media">
+                                            <figure class="devsite-landing-row-item-custom-image" background="white">
+                                                <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+                                                    <a href="https://codingcompetitions.withgoogle.com/hashcode/hubs"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Apply to host a Hash Code Hub, Main title"
+                                                        data-action="link">
+                                                        <div class="devsite-landing-row-item-custom-image-icon-container"
+                                                            background="white" size="medium">
+                                                            <img class="devsite-landing-row-item-custom-image-icon"
+                                                                alt=""
+                                                                src="https://developers.google.com/site-assets/images/news/hashcode.png"
+                                                                srcset="https://developers.google.com/site-assets/images/news/hashcode_36.png 36w,https://developers.google.com/site-assets/images/news/hashcode_48.png 48w,https://developers.google.com/site-assets/images/news/hashcode_72.png 72w,https://developers.google.com/site-assets/images/news/hashcode_96.png 96w,https://developers.google.com/site-assets/images/news/hashcode_480.png 480w,https://developers.google.com/site-assets/images/news/hashcode_720.png 720w,https://developers.google.com/site-assets/images/news/hashcode_856.png 856w,https://developers.google.com/site-assets/images/news/hashcode_960.png 960w,https://developers.google.com/site-assets/images/news/hashcode_1440.png 1440w,https://developers.google.com/site-assets/images/news/hashcode_1920.png 1920w,https://developers.google.com/site-assets/images/news/hashcode_2880.png 2880w"
+                                                                sizes="192px" loading="lazy">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="devsite-landing-row-item-description">
+                                            <div class="devsite-landing-row-item-body">
+                                                <h3 id="apply-to-host-a-hash-code-hub"
+                                                    data-text="Apply to host a Hash Code Hub"
+                                                    class="hide-from-toc no-link" tabindex="0">
+                                                    <a href="https://codingcompetitions.withgoogle.com/hashcode/hubs"
+                                                        data-category="Homepage Promo Banner"
+                                                        data-label="Apply to host a Hash Code Hub, Main title"
+                                                        data-action="link">
+                                                        Apply to host a Hash Code Hub
+                                                    </a>
+                                                </h3>
+                                                <div class="devsite-landing-row-item-description-content">
+                                                    Join Hash Code, Google's team programming
+                                                    competition for
+                                                    students and professionals.
+                                                    Bring your community or organization
+                                                    together to solve a real
+                                                    engineering problem.
+                                                    Deadline is February 17.
+                                                </div>
+                                                <div class="devsite-landing-row-item-buttons">
+                                                    <a href="https://codingcompetitions.withgoogle.com/hashcode/hubs"
+                                                        class="button button-white"
+                                                        data-category="Homepage Promo Banner" data-action="button"
+                                                        data-label="Apply to host a Hash Code Hub, Learn more">Learn
+                                                        more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </devsite-content>
+            </main>
+        </section>
+    </section>
+</body>
+
+</html>
