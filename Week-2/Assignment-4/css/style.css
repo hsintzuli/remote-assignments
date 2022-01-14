@@ -1,0 +1,154 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', sans-serif, 'SimHei', 'STHeiti';
+	line-height: 1.2;
+	color: #3a3a3a;
+	margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h2 {
+	color: #093a58;
+}
+a {
+	text-decoration: none;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+.name {
+	font-size: 1.4em;
+	margin: 0;
+}
+.main-nav {
+	margin-top: 2.5px;
+}
+.name a:before {
+	content:"";
+	background-image: url('../img/robot.png');
+    background-size: 40px 40px;
+	display: inline-block;
+	margin-right: 10px;
+    width: 40px;
+	height: 40px; 
+}
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 5px 5px;
+}
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+}
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+.banner,
+.main-content {
+	text-align: center;
+}
+.banner {
+	color: #fff;
+	background: #3acec2;
+	padding: 1em 1em;
+}
+.main-content {
+	padding-bottom: 5%;
+}
+.container {
+	margin: 0 auto 20px;
+	padding: 0;
+	background: #fff;
+	width: 90%;	
+}
+.item {
+	padding: 0.5em 0.5em;
+	margin: 5px;
+	height: 10vh;
+	background: #3db5da;
+}
+
+/* ---- Page Elements ---- */
+
+.button {
+	color: #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #3acec2;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+	.main-header,
+	.row {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.tagline {
+		font-size: 1.5em;
+	}
+	.item {
+		height: 100px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+@media (min-width: 768px) {
+  
+    .main-header, 
+    .main-nav,
+    .main-content,
+    .container {
+        display: flex;
+     }
+    
+     .main-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center; 
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .item {
+        flex: 1 1 40%;
+    }
+}
