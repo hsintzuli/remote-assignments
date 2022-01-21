@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  section#content
+    form(action='/trackName', method='post')
+        label Pleae enter your name:
+        input(type='text', name='username')
+        br
+        button(type='submit') Submit

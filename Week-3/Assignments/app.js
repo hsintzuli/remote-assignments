@@ -1,6 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const app = express();
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 app.use('/', express.static('static'));
 app.set('view engine', 'pug');
 
@@ -22,6 +26,30 @@ app.get('/data', (req, res) => {
     const ans = number * (number + 1) / 2;
     res.render('data', { number, ans } );
 });
+
+app.get('/trackname', (req, res) => {
+    const name = req.cookies.username;
+    if (name) {
+        res.redirect('/myname'); 
+    } else {
+        res.render('trackName');
+    }
+});
+
+app.post('/trackname', (req, res) => {
+    res.cookie('username', req.body.username);
+    res.redirect('/myname');
+});
+
+app.get('/myname', (req, res) => {
+    const name = req.cookies.username;
+    if (name) {
+        res.render('name', {name}); 
+    } else {
+        res.redirect('/trackname');
+    }
+});
+
 
 app.use((err, req, res, next) => {
     res.locals.error = err;
