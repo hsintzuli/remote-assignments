@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background: #e9eaea;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+  }
+  
+  .container{
+    width: 600px;
+    margin: 60px auto;
+  }
+  
+  .signup,
+  .login{
+    width: 50%;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .signup-form,
+  .login-form{
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    clear: both;
+    box-sizing: border-box;
+  }
+  
+  .input{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border: 2px solid #e9eaea;
+    color: #3e3e40;
+    font-size: 14px;
+    outline: none;
+    transform: all 0.5s ease;
+  }
+  
+  .input:focus{
+    border: 2px solid #34b3a0;
+  }
+  
+  .btn{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #34b3a0;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+  }
+
+
+.error-msg {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  background-color: #f44336; 
+  color: white;
+  text-align: center;
+}
+
+.error-msg > p {
+  display: block;
+  font-size: 1.5em;
+}
+
+.closebtn {
+  margin: 10px auto auto;
+  width: 80%;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: black;
+}
