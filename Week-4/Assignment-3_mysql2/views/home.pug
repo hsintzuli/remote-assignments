@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+  .container
+    .signup Sign Up
+    .login Log In
+    .signup-form
+      form.form(action='/signup' method='post')
+        input.input(type='text' name='email' placeholder='Email')
+        br
+        input.input(type='password' name='password' placeholder='Password')
+        br
+        button.btn.btn-signup(type='submit') Create account
+    .login-form
+      form.form(action='/login' method='post')
+        input.input(type='text' name='email' placeholder='Email')
+        br
+        input.input(type='password' name='password' placeholder='Password')
+        br
+        button.btn.btn-login(type='submit') log in
+    if errormsg
+      .error-msg
+        p Error! #{errormsg}
+        button.btn.closebtn OK
+  script(src='js/action.js')
