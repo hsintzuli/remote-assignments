@@ -1,42 +1,30 @@
 const express = require('express');
-const mysql = require('mysql2/promise');
-const env = require('./key.json');
+const session = require('express-session');
+require('dotenv').config();
+
+const db = require('./db/conn.js');
+const securePassword = require("./utils/securePassword");
+const comparePassword = require("./utils/comparePassword");
+const userValidation = require("./validation/validator");
+
 
 const app = express();
+app.set('view engine', 'pug');
 app.use(express.urlencoded({ extended: false }));
 app.use('/', express.static('static'));
-app.set('view engine', 'pug');
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    saveUninitialized:false,
+    name:'user',
+    resave: false
+}));
 
-const connection = function () {
-    return mysql.createConnection({
-        host: env.MYSQL_HOST,
-        user: env.MYSQL_USER,
-        password: env.MYSQL_PASSWORD,
-        database: "assignment"
-    });
-};
-
-async function selectFromDB(email) {
-    const db = await connection();
-    const sql = `SELECT * FROM user WHERE email = '${email}';`;
-    const [results, fileds] = await db.query(sql);
-    console.log('\nResults From Query:');
-    console.log(results);
-    return results;
-}
-
-async function insertToDB(email, password) {
-    const db = await connection();
-    const sql = await `INSERT INTO user (email, password) VALUES ('${email}', '${password}')`;
-    const [results, fileds] = await db.query(sql);
-    console.log('\nResults From Query:');
-    console.log(results);
-    return results;
-}
 
 app.get('/', (req, res) => {
     const errormsg = req.query.e;
-    if (errormsg) {
+    if (req.session.user) {
+        res.redirect('/member');
+    } else if(errormsg) {
         res.render('home', { errormsg });
     } else {
         res.render('home');
@@ -44,23 +32,28 @@ app.get('/', (req, res) => {
 });
 
 app.get('/member', (req, res) => {
-    res.render('welcome');
+    if (req.session.user) {
+        res.render('welcome');
+        console.log(req.session);
+    } else {
+        res.redirect('/');
+    }
 })
 
-
-app.post('/signup', async (req, res, next) => {
-    const email = req.body.email;
-    const password = req.body.password;
-
-    if (!email || !password) {
-        const errormsg = 'Invalid email or password.'
-        res.redirect('/?e=' + encodeURIComponent(errormsg));
-        return;
+app.post('/signup', userValidation, async (req, res, next) => {
+    if (!res.locals.validate) {
+        const errormsg = res.locals.validationMessage;
+        return res.redirect('/?e=' + encodeURIComponent(errormsg));
     }
+
     try {
-        const results = await selectFromDB(email);
+        const email = req.body.email;
+        const hashedPassword = await securePassword(req.body.password);
+        const results = await db.selectFromDB(email);
+
         if (results.length === 0) {
-            const insertResult = await insertToDB(email, password);
+            const result = await db.insertToDB(email, hashedPassword);
+            req.session.user = result.id;
             res.redirect('/member');
         } else {
             const errormsg = 'This email address is already being used.'
@@ -71,19 +64,20 @@ app.post('/signup', async (req, res, next) => {
     }
 });
 
-app.post('/login', async (req, res, next) => {
-    const email = req.body.email;
-    const password = req.body.password;
-    if (!email || !password) {
-        const errormsg = 'Invalid email or password.'
-        res.redirect('/?e=' + encodeURIComponent(errormsg));
-        return;
+app.post('/login', userValidation, async (req, res, next) => {
+    console.log(res.locals);
+    if (!res.locals.validate) {
+        const errormsg = res.locals.validationMessage;
+        return res.redirect('/?e=' + encodeURIComponent(errormsg));
     }
-    try {
-        const results = await selectFromDB(email);
-        if (results.length > 0 && results[0].password === password) {
-            res.redirect('/member');
 
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+        const results = await db.selectFromDB(email);
+        if (results.length > 0 && await comparePassword(password, results[0].password)) {
+            req.session.user = results[0].id;
+            res.redirect('/member');
         } else {
             const errormsg = 'Incorrect email or password.';
             res.redirect('/?e=' + encodeURIComponent(errormsg));
@@ -92,6 +86,14 @@ app.post('/login', async (req, res, next) => {
         next(err);
     }
 });
+
+app.get('/logout' , (req, res) => {
+    req.session.destroy(() => {
+        console.log('session destroyed');
+      });
+    res.redirect('/');
+});
+
 
 app.use((err, req, res, next) => {
     res.locals.error = err;
