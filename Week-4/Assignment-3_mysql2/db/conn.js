@@ -14,8 +14,8 @@ const connection = function () {
 
 db.selectFromDB = async function(email) {
     const db = await connection();
-    const sql = `SELECT * FROM user WHERE email = '${email}';`;
-    const [results, fileds] = await db.query(sql);
+    const sql = `SELECT * FROM user WHERE email = ?;`;
+    const [results, fileds] = await db.execute(sql, [email]);
     console.log('\nResults From Query:');
     console.log(results);
     return results;
@@ -23,8 +23,8 @@ db.selectFromDB = async function(email) {
 
 db.insertToDB = async function(email, password) {
     const db = await connection();
-    const sql = await `INSERT INTO user (email, password) VALUES ('${email}', '${password}')`;
-    const [results, fileds] = await db.query(sql);
+    const sql = await `INSERT INTO user (email, password) VALUES (?, ?)`;
+    const [results, fileds] = await db.execute(sql, [email, password]);
     console.log('\nResults From Query:');
     console.log(results);
     return results;
